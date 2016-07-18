@@ -1,0 +1,19 @@
+#lenny   {
+    font-size: 3em;
+}
+p {
+    text-align: center;
+}
+.container {
+    margin: 15% auto;
+}
+.font-div {
+    margin: 0 auto;
+    width: 300px;
+}
+select {
+    width: 100%;
+    font-size: 1em;
+    padding-bottom: 2px;
+    margin: 10px;
+}
