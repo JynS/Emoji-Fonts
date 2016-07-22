@@ -85,7 +85,6 @@ module.exports = function(grunt) {
                     }
                 ]
             },
-            // server: '.tmp'
         },
         copy: {
             dist: {
@@ -97,7 +96,6 @@ module.exports = function(grunt) {
                         dest: 'dist/',
                         src: [
                             '*.html',
-                            // 'images/*.png',
                             '*.json'
                         ]
                     }
@@ -147,34 +145,6 @@ module.exports = function(grunt) {
                 ]
             }
         },
-        // note: usemin doesn't have this plugin, which is why it needs to be set up here
-        // imagemin: {
-        //     dist: {
-        //         files: [
-        //             {
-        //                 expand: true,
-        //                 cwd: 'src/images/',
-        //                 src: ['{,*/}*.{png,jpg,jpeg,gif}'],
-        //                 dest: 'dist/images'
-        //             }
-        //         ]
-        //     }
-        // },
-
-        // shell: {
-        //     multiple: {
-        //         command: [
-        //             'cp -R dist package.json Gruntfile.js ../personal-website-deploy',
-        //             'cd ../personal-website-deploy',
-        //             'git add .',
-        //             'git commit -m "new build"',
-        //             'git push heroku master',
-        //             'heroku open',
-        //             'cd ../personal-website',
-        //             'ls -l'
-        //         ].join('&&')
-        //     }
-        // },
 
         /*
         prepares the configuration to transform specific blocks in the
@@ -255,9 +225,6 @@ module.exports = function(grunt) {
         // usemin
         'cssmin',
 
-        // optimize images from src and place generated images in dist/images
-        // 'imagemin',
-
         // use babel (hopefully get rid of es6 error in uglify)
         'babel:dist',
 
@@ -272,41 +239,4 @@ module.exports = function(grunt) {
         // minify the html in dist
         'htmlmin',
     ]);
-
-    grunt.registerTask('build --no-imagemin', [
-        'clean:dist',
-
-        'useminPrepare',
-
-        'autoprefixer',
-
-        'concat',
-
-        'copy:dist',
-        'copy:styles',
-        'copy:images',
-
-        'cssmin',
-
-        'babel:dist',
-
-        'uglify',
-        'filerev',
-
-        'usemin',
-
-        'htmlmin',
-    ]);
-
-    grunt.registerTask('deploy', [
-        'build',
-        // 'shell'
-    ]);
-
-    grunt.registerTask('default', [
-        // 'newer:jshint',
-        // 'test',
-        // 'build'
-    ]);
-
 };
