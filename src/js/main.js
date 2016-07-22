@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 (function() {
 
-    var Lenny = function() {
+    var Emoji = function() {
 
         this.fonts = [
             // base web safe fonts
@@ -127,11 +127,11 @@
         ];
     };
 
-    Lenny.prototype = {
+    Emoji.prototype = {
 
         buildOption: function(select, name, css) {
             /*
-            Adds option to select list. When clicked, the font will be applied to the Lenny
+            Adds option to select list. When clicked, the font will be applied to the Emoji
             */
 
             var op = document.createElement("option");
@@ -147,7 +147,7 @@
             Set font family for emoji
             */
 
-            $("#lenny").css("font-family", font);
+            $("#emoji").css("font-family", font);
         },
 
         setEmoji: function(em) {
@@ -155,7 +155,7 @@
             Set emoji
             */
 
-            $("#lenny").text(em);
+            $("#emoji").text(em);
         },
 
         init: function() {
@@ -175,8 +175,8 @@
         }
     };
 
-    // initialize Lenny
-    var l = new Lenny();
+    // initialize Emoji
+    var l = new Emoji();
     l.init();
 
     l.setFont($($("#fonts option")[0]).text());
