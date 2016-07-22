@@ -156,7 +156,7 @@
 
         init: function() {
             /*
-            Add base fonts to select list
+            Add fonts and emojis to select lists
             */
 
             var self = this;
