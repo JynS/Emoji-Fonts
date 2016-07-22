@@ -151,6 +151,10 @@
         },
 
         setEmoji: function(em) {
+            /*
+            Set emoji
+            */
+
             $("#lenny").text(em);
         },
 
