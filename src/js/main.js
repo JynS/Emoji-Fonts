@@ -1,7 +1,5 @@
 /*jshint esversion: 6 */
 (function() {
-    var d = new Detector();
-
 
     var Lenny = function() {
 
