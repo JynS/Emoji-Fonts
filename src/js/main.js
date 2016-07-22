@@ -144,7 +144,7 @@
 
         setFont: function(font) {
             /*
-            set font family for Lenny
+            Set font family for emoji
             */
 
             $("#lenny").css("font-family", font);
