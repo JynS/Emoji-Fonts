@@ -125,6 +125,9 @@
             "ʕ•ᴥ•ʔ",
             "˙ ͜ʟ˙"
         ];
+
+        this.currentFont = this.fonts[0];
+        this.currentEmoji = this.emojis[0];
     };
 
     Emoji.prototype = {
@@ -179,8 +182,8 @@
     var l = new Emoji();
     l.init();
 
-    l.setFont($($("#fonts option")[0]).text());
-    l.setEmoji($($("#emojis option")[0]).text());
+    l.setFont(l.currentFont.css);
+    l.setEmoji(l.currentEmoji);
 
     // attach listeners
     $("#fonts").change(function() {
