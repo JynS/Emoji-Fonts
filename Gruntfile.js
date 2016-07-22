@@ -96,7 +96,11 @@ module.exports = function(grunt) {
                         dest: 'dist/',
                         src: [
                             '*.html',
-                            '*.json'
+                            '*.json',
+                            '*.png',
+                            '*.svg',
+                            '*.xml',
+                            "*.ico"
                         ]
                     }
                 ]
