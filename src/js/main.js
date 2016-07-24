@@ -99,14 +99,6 @@
         'css': '"Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif'},
         {'name': 'Verdana',
         'css': 'Verdana,Geneva,sans-serif'},
-
-        // google fonts
-        {'name': 'Ewert',
-        'css': '"Ewert", cursive'},
-        {'name': 'Press Start 2P',
-        'css': '"Press Start 2P", cursive'},
-        {'name': 'Vast Shadow',
-        'css': '"Vast Shadow", cursive'}
     ];
 
     var emojis = [
