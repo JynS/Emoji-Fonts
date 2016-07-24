@@ -34,18 +34,23 @@
         <!-- Add your site or application content here -->
         <div class="container wrapper">
             <p contenteditable="true" id="emoji"></p>
-            <div id="font-div">
+            <div id="font-div" class="row">
                 <!-- Base fonts -->
-                <button id="fontsL" class="btn"><i class="fa fa-arrow-left arrow"></i></button>
-                <select id="fonts"></select>
-                <button id="fontsR" class="btn"><i class="fa fa-arrow-right arrow"></i></button>
+                <div class="col-xs-2 col-md-2">
+                    <button id="fontsL" class="btn"><i class="fa fa-arrow-left arrow"></i></button>
+                </div>
+                <div class="col-xs-8 col-md-8">
+                    <select id="fonts"></select>
+                </div>
+                <div class="col-xs-2 col-md-2">
+                    <button id="fontsR" class="btn"><i class="fa fa-arrow-right arrow"></i></button>
+                </div>
+            </div>
+            <div id="emoji-div" class="row">
                 <p>
                     Choose from the emojis below or copy and paste your own above
                 </p>
                 <select id="emojis"></select>
-            </div>
-            <div id="emoji-div">
-
             </div>
         </div>
 
