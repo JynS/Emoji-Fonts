@@ -2,7 +2,7 @@
 #emoji   {
     font-size: 3em;
     margin-bottom: 5%;
-    /*border-bottom: 2px solid rgba(0, 84, 255, 0.3);*/
+    /*border: 1px solid rgba(0, 84, 255, 0.3);*/
 }
 
 /* Buttons */
@@ -14,10 +14,10 @@
 .arrow {
     font-size: 2em;
 }
-#fontsR {
+.right {
     float: left;
 }
-#fontsL {
+.left {
     float: right;
 }
 
@@ -32,15 +32,19 @@ p {
 select {
     text-align: center;
     text-align-last: center; /* needed to center in Chrome and Opera */
+    /* TODO: figure out how to center text in Safari */
     border: 0;
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid rgba(0, 84, 255, 0.3);
     background: transparent;
     width: 100%;
     padding: 5px;
     font-size: 1.5em;
-    border-bottom: 1px solid rgba(0, 84, 255, 0.3);;
     height: 39px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+#emoji-div {
+    margin-top: 5%;
 }

@@ -310,7 +310,8 @@
 
     $("#emojis").change(function() {
         var em = $("#emojis option:selected").text();
-        setEmoji(em);
+        currentEmoji = emojill.getBySearch(em);
+        setEmoji(currentEmoji.v);
     });
 
     $("#fontsL").click(function() {
@@ -319,6 +320,14 @@
 
     $("#fontsR").click(function() {
         cycleFont("r");
+    });
+
+    $("#emojisL").click(function() {
+        cycleEmoji("l");
+    });
+
+    $("#emojisR").click(function() {
+        cycleEmoji("r");
     });
 
     // TODO: connect options selected from "select" to the LLNode
