@@ -1,13 +1,34 @@
 #emoji   {
     font-size: 3em;
+    /*border-bottom: 2px solid rgba(0, 84, 255, 0.3);*/
 }
+
+/* Buttons */
+.btn {
+    position: relative;;
+    border: 0;
+    background: 0;
+}
+.arrow {
+    font-size: 2em;
+}
+#fontsR {
+    right: 0%;
+    top: 0%;
+}
+#fontsL {
+    left: 0%;
+    top: 0%;
+}
+
+
 p {
     text-align: center;
 }
-.container {
-    margin: 15% auto;
+.wrapper {
+    margin: 10% auto;
 }
-.font-div {
+#font-div {
     margin: 0 auto;
     width: 300px;
 }

@@ -18,6 +18,8 @@
         <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Vast+Shadow' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
         <!-- build:css({.tmp, src}) styles/style.css -->
         <link rel="stylesheet" href="css/main.css">
@@ -30,17 +32,20 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="container">
+        <div class="container wrapper">
             <p contenteditable="true" id="emoji"></p>
-            <div class="font-div">
+            <div id="font-div">
                 <!-- Base fonts -->
-                <button id="fontsL">◀</button>
+                <button id="fontsL" class="btn"><i class="fa fa-arrow-left arrow"></i></button>
                 <select id="fonts"></select>
-                <button id="fontsR">▶</button>
+                <button id="fontsR" class="btn"><i class="fa fa-arrow-right arrow"></i></button>
                 <p>
                     Choose from the emojis below or copy and paste your own above
                 </p>
                 <select id="emojis"></select>
+            </div>
+            <div id="emoji-div">
+
             </div>
         </div>
 
