@@ -116,8 +116,6 @@
         "˙ ͜ʟ˙"
     ];
 
-    // TODO: Allow user to add in their own emojis to the list (which would be stored into their local storage). I'm thinking the user can still copy paste what they want directly into the paragraph, and permanently store in as option by clicking a button. I could bring up a modal and have text there be stored, or have a single button that stores whatever happens to be in the emoji paragraph at the time
-
     var LLNode = function(value, searchID, prevNode, nextNode) {
 
         this.v = value;
@@ -321,7 +319,5 @@
     $("#emojisR").click(function() {
         cycleEmoji("r");
     });
-
-    // TODO: connect options selected from "select" to the LLNode
 
 })();

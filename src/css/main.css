@@ -2,7 +2,6 @@
 #emoji   {
     font-size: 3em;
     margin-bottom: 5%;
-    /*border: 1px solid rgba(0, 84, 255, 0.3);*/
 }
 
 /* Buttons */
@@ -32,7 +31,7 @@ p {
 select {
     text-align: center;
     text-align-last: center; /* needed to center in Chrome and Opera */
-    /* TODO: figure out how to center text in Safari */
+    /* sadly, nothing I can do for Safari ¯\_(ツ)_/¯ */
     border: 0;
     border-bottom: 1px solid rgba(0, 84, 255, 0.3);
     background: transparent;
