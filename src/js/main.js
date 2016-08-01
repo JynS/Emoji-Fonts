@@ -117,6 +117,9 @@
     ];
 
     var LLNode = function(value, searchID, prevNode, nextNode) {
+        /*
+        Linked List Node
+        */
 
         this.v = value;
         this.sid = searchID;
@@ -201,6 +204,10 @@
             llist.add(currentNode);
         }
 
+        /*
+        Connect the first node to the last node.
+        This way, when the user reaches the end of the list, it will loop around
+        */
         var lastNode = new LLNode(arr[arr.length-1], searchID, llist.getLast(), llist.getFirst());
         llist.setPrev(llist.getFirst(), lastNode);
         llist.setNext(llist.getLast(), lastNode);
@@ -217,7 +224,7 @@
 
     function buildOption(select, name, css) {
         /*
-        Adds option to select list. When clicked, the font will be applied to the Emoji
+        Adds option to select list.
         */
 
         var op = document.createElement("option");
@@ -229,6 +236,9 @@
     }
 
     function cycleFont(direction) {
+        /*
+        cycle through available fonts and apply to text area
+        */
 
         if (direction === "l") {
             currentFont = currentFont.p;
@@ -243,6 +253,9 @@
     }
 
     function cycleEmoji(direction) {
+        /*
+        cycle through available emojis and apply to text area
+        */
 
         if (direction === "l") {
             currentEmoji = currentEmoji.p;
@@ -265,7 +278,7 @@
 
     function setEmoji(em) {
         /*
-        Set emoji
+        Set emoji to text area
         */
 
         $("#emoji").text(em);
@@ -273,8 +286,8 @@
 
     function init() {
         /*
-        Add fonts and emojis to select lists;
-        Build LLNodes of fonts and emojis;
+        Add fonts and emojis to select lists.
+        Set current font and emoji
         */
 
         fonts.forEach(v => {
@@ -294,12 +307,22 @@
     // attach listeners
     $("#fonts").change(function() {
         var font = $("#fonts option:selected").text();
+
+        /*
+        Find LLNode of the font and make it the currentFont.
+        This way, the program can cycle to the next or previous font correctly
+        */
         currentFont = fontll.getBySearch(font);
         setFont(currentFont.v.css);
     });
 
     $("#emojis").change(function() {
         var em = $("#emojis option:selected").text();
+
+        /*
+        Find LLNode of the emoji and make it the currentFont.
+        This way, the program can cycle to the next or previous emoji correctly 
+        */
         currentEmoji = emojill.getBySearch(em);
         setEmoji(currentEmoji.v);
     });
