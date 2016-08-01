@@ -297,12 +297,12 @@
         emojis.forEach(v => {
             buildOption("#emojis", v);
         });
+
+        setFont(currentFont.v.css);
+        setEmoji(currentEmoji.v);
     }
 
     init();
-
-    setFont(currentFont.v.css);
-    setEmoji(currentEmoji.v);
 
     // attach listeners
     $("#fonts").change(function() {
